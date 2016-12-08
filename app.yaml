@@ -1,7 +1,10 @@
 runtime: python
 vm: true
-entrypoint: gunicorn -b :$PORT server:app
+threadsafe: true
 
 runtime_config:
-  # You can also specify 2 for Python 2.7
   python_version: 3
+
+handlers:
+- url: /.*
+  script: server.app
