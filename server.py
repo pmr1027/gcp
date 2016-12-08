@@ -1,5 +1,5 @@
 from flask import Flask, render_template, render_template_string, make_response, redirect
-from flask.flask_restful import Api, Resource, reqparse, abort
+from flask_restful import Api, Resource, reqparse, abort
 
 import json
 import string
